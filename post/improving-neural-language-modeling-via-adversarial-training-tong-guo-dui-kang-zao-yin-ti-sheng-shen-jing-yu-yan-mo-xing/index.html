@@ -1,22 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://saoyear.github.io</id>
-    <title>Personal Page of Nian</title>
-    <updated>2020-07-27T10:47:57.601Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://saoyear.github.io"/>
-    <link rel="self" href="https://saoyear.github.io/atom.xml"/>
-    <subtitle>I&apos;m Nian. Add me on Brawl Stars: #VVRRUJ0</subtitle>
-    <logo>https://saoyear.github.io/images/avatar.png</logo>
-    <icon>https://saoyear.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Personal Page of Nian</rights>
-    <entry>
-        <title type="html"><![CDATA[Improving Neural Language Modeling via Adversarial Training 通过对抗噪音提升神经语言模型]]></title>
-        <id>https://saoyear.github.io/post/improving-neural-language-modeling-via-adversarial-training-tong-guo-dui-kang-zao-yin-ti-sheng-shen-jing-yu-yan-mo-xing/</id>
-        <link href="https://saoyear.github.io/post/improving-neural-language-modeling-via-adversarial-training-tong-guo-dui-kang-zao-yin-ti-sheng-shen-jing-yu-yan-mo-xing/">
-        </link>
-        <updated>2020-07-27T10:26:36.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Improving Neural Language Modeling via Adversarial Training 通过对抗噪音提升神经语言模型 | Personal Page of Nian</title>
+<link rel="shortcut icon" href="https://saoyear.github.io/favicon.ico?v=1595846870556">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://saoyear.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Improving Neural Language Modeling via Adversarial Training 通过对抗噪音提升神经语言模型 | Personal Page of Nian - Atom Feed" href="https://saoyear.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+
+前言
+0. 摘要(Abstract)
+1. 引言(Introduction)
+2. 背景：神经语言模型(Background: Neural Language Model)
+3. 主要方法(Main Method)
+
+3.1. 对抗最大..." />
+    <meta name="keywords" content="自然语言处理(NLP)" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://saoyear.github.io">
+  <img class="avatar" src="https://saoyear.github.io/images/avatar.png?v=1595846870556" alt="">
+  </a>
+  <h1 class="site-title">
+    Personal Page of Nian
+  </h1>
+  <p class="site-description">
+    I'm Nian. Add me on Brawl Stars: #VVRRUJ0
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          HOME
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          BLOG
+        </a>
+      
+    
+      
+        <a href="https://saoyear.github.io/tags" class="menu">
+          TAG
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Improving Neural Language Modeling via Adversarial Training 通过对抗噪音提升神经语言模型
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-07-27
+              </span>
+              <span>
+                20 min read
+              </span>
+              
+                <a href="https://saoyear.github.io/tag/o-fuCFrFx/" class="post-tag">
+                  # 自然语言处理(NLP)
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://saoyear.github.io/post-images/improving-neural-language-modeling-via-adversarial-training-tong-guo-dui-kang-zao-yin-ti-sheng-shen-jing-yu-yan-mo-xing.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <!-- more -->
 <p><ul class="markdownIt-TOC">
 <li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
 <li><a href="#0-%E6%91%98%E8%A6%81abstract">0. 摘要(Abstract)</a></li>
@@ -142,106 +222,118 @@ AdvSoft_{\epsilon}(i, \bm\omega, h) &amp;=\frac{exp(\omega_i^Th - \epsilon||h||)
 <p>本篇文章展示了一个对抗MLE训练策略，其在自然语言模型中可以提升词嵌空间的多样性和结果的泛化能力。这种方法可以在所有MLE基础模型上直接使用而不带来额外的训练参数和计算。通过这个方法，许多语言模型和翻译模型都得到了提升，取得了SOTA的结果。</p>
 <!-- more -->
 <!-- more -->
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NLP(自然语言处理) - Tricks & Dataset 集合]]></title>
-        <id>https://saoyear.github.io/post/nlpzi-ran-yu-yan-chu-li-tricks-and-dataset-ji-he/</id>
-        <link href="https://saoyear.github.io/post/nlpzi-ran-yu-yan-chu-li-tricks-and-dataset-ji-he/">
-        </link>
-        <updated>2020-07-27T09:35:42.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<h1 id="前言">前言</h1>
-<p>这是一篇NLP tricks的集合，在自然语言处理的模型中，有很多优化模型效果的技巧，其中很多技巧已经称为默认设置，不再文章中额外说明。这里持续更新一些方法作为记录。</p>
-<p><ul class="markdownIt-TOC">
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
 <li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
-<li><a href="#weight-average">Weight Average</a></li>
-<li><a href="#adaptive-embedding">Adaptive Embedding</a></li>
-<li><a href="#variational-dropout">Variational Dropout</a></li>
-<li><a href="#sampled-softmax">Sampled Softmax</a></li>
-<li><a href="#glue">GLUE</a></li>
+<li><a href="#0-%E6%91%98%E8%A6%81abstract">0. 摘要(Abstract)</a></li>
+<li><a href="#1-%E5%BC%95%E8%A8%80introduction">1. 引言(Introduction)</a></li>
+<li><a href="#2-%E8%83%8C%E6%99%AF%E7%A5%9E%E7%BB%8F%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8Bbackground-neural-language-model">2. 背景：神经语言模型(Background: Neural Language Model)</a></li>
+<li><a href="#3-%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95main-method">3. 主要方法(Main Method)</a>
+<ul>
+<li><a href="#31-%E5%AF%B9%E6%8A%97%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1adversarial-mle">3.1. 对抗最大似然估计(Adversarial MLE)</a></li>
+<li><a href="#32-%E8%AF%8D%E5%B5%8C%E5%90%91%E9%87%8F%E7%9A%84%E5%A4%9A%E6%A0%B7%E6%80%A7diversity-of-embedding-vectors">3.2. 词嵌向量的多样性(Diversity of Embedding Vectors)</a></li>
 </ul>
-(技巧列表)</p>
-<h1 id="weight-average">Weight Average</h1>
-<p>Weight Average是一种自动集成方式，指的是在最终进行模型测试前，取前面每个checkpoint模型权重的平均值作为最终的测试模型。</p>
-<h1 id="adaptive-embedding">Adaptive Embedding</h1>
-<p>Adaptive embedding 是一种自适应词频的词嵌构建方法，通常用于<strong>词表较大的数据集</strong>（PTB这种小集就不用了）。这种方法的出发点是词频越高的词往往越容易出现一词多义的现象，同时其本身的含义也越丰富。<br>
-同时伴随的一般是一组<strong>Cut-off</strong>值，这个值将词频分为了几个区间，比如[300000, 60000, 2000]。这时，在不同区间的词有不一样大小的词嵌矩阵。对任意一个词进行词嵌操作，会首先根据不同词频映射为不同大小的词嵌向量，再通过线性映射，统一投影为规定维度大小。如下图所示：<br>
-<img src="https://img-blog.csdnimg.cn/20200701154500689.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1NTA5ODIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"><br>
-高频词<strong>The</strong>和<strong>little</strong>通过高频词表转化为维度为d的词向量，而低频词<strong>dog</strong>转化为维度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mi>d</mi><msup><mi>k</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup></mfrac></mrow><annotation encoding="application/x-tex">\frac{d}{k^{n-1}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801079999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>的词向量，而后再将这些向量映射到d维的向量作为输入的token。</p>
-<h1 id="variational-dropout">Variational Dropout</h1>
-<p>依据AWD-LSTM给出的解释，Variational Dropout不同于标准的Dropout，在每层，每次传递信息时使用Dropout都会随机生成一个Dropout mask。Variational Dropout会在第一次执行时就确定一个固定的Dropout mask。这个mask只会在下一个mini-batch时改变。</p>
-<h1 id="sampled-softmax">Sampled Softmax</h1>
-<p>当我们在做语言模型或其他NLP任务时，每一步的输出很有可能是一个词。一般来说，我们输出这个词的策略是在最后一层输出一个词表大小的向量，然后使用softmax函数对这个向量的每一个元素打分，根据打分（或概率）的结果输出这个词。而这样做有一个很大的弊端，就是当词表非常大的时候，我们每一次进行输出都要遍历一遍词表。<br>
-<a href="https://arxiv.org/pdf/1412.2007.pdf">Bengio（原文章）</a>提出我们可以针对每个mini-batch汇总一次词表，以减小每次输出时遍历造成的高额运算，这就是Sampled Softmax。</p>
-<h1 id="glue">GLUE</h1>
-<p>GLUE全称为General Language Understanding Evaluation，可以访问其<a href="https://gluebenchmark.com/">benchmark官网</a>。 其中分为了多个任务，以下表格详细说明：</p>
-<table>
-<thead>
-<tr>
-<th>Task name</th>
-<th>中文翻译</th>
-<th>数据集说明</th>
-<th>评估矩阵</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CoLA <br/> (The Corpus of Linguistic Acceptability)</td>
-<td>评估数据集语法接受程度</td>
-<td>单句的二分类问题, 判断一个英文句子在语法上是不是可接受的</td>
-<td>Matthew's Corr</td>
-</tr>
-<tr>
-<td>SST-2 <br/> (The Stanford Sentiment Treebank)</td>
-<td>标准情感数据集</td>
-<td>单句的二分类问题, 句子的来源于人们对一部电影的评价 <br/> 判断这个句子的情感倾向为 Positive/Negative</td>
-<td>Accuracy</td>
-</tr>
-<tr>
-<td>MRPC <br/> (Microsoft Research Paraphrase Corpus)</td>
-<td>微软复述语料库</td>
-<td>句子对来源于对同一条新闻的评论 <br/> 判断这一对句子在语义上是否相同</td>
-<td>F1/Accuracy</td>
-</tr>
-<tr>
-<td>STS-B <br/> (Semantic Textual Similarity Benchmark)</td>
-<td>语义文本相似度数据</td>
-<td>类似回归问题,给出一对句子 <br/> 使用1~5的评分评价两者在语义上的相似程度</td>
-<td>Pearson-Spearman Corr</td>
-</tr>
-<tr>
-<td>QQP <br/> (Quora Question Pairs)</td>
-<td>Quara问题对</td>
-<td>Quora 上的问题答案数据集, 目的是判断两个来自于Quora的问题句子在语义上是否是等价的</td>
-<td>F1 / Accuracy</td>
-</tr>
-<tr>
-<td>MNLI <br/> (MultiNL - matched/mismached)</td>
-<td>多自然语言句型/跨句型匹配</td>
-<td>推断两个句子是意思相近, 矛盾, 还是无关</td>
-<td>Accuracy</td>
-</tr>
-<tr>
-<td>QNLI <br/> (Question NLI)</td>
-<td>自然语言问题推断</td>
-<td>二分类问题, 两个句子是一个QA对 <br/> 正样本为Answer是对应Question的答案, 负样本为不是</td>
-<td>Accuracy</td>
-</tr>
-<tr>
-<td>RTE <br/> (Recognizing Textual Entailment)</td>
-<td>文本蕴含识别</td>
-<td>二分类问题, 判断两个句子是否意思相近, 但是数据量较少</td>
-<td>Accuracy</td>
-</tr>
-<tr>
-<td>WNLI <br/> (Winograd NLI)</td>
-<td>自然语言推理数据集</td>
-<td>推断两个句子是意思相近, 矛盾, 还是无关</td>
-<td>Accuracy</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-</feed>
+</li>
+<li><a href="#4-%E7%9B%B8%E5%85%B3%E5%B7%A5%E4%BD%9C%E4%B8%8E%E8%AE%A8%E8%AE%BArelated-works-and-discussions">4. 相关工作与讨论(Related Works and Discussions)</a></li>
+<li><a href="#5-%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9Cempirical-results">5. 实验结果(Empirical Results)</a></li>
+<li><a href="#6-%E6%80%BB%E7%BB%93conclusions">6. 总结(Conclusions)</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://saoyear.github.io/post/nlpzi-ran-yu-yan-chu-li-tricks-and-dataset-ji-he/">
+              <h3 class="post-title">
+                NLP(自然语言处理) - Tricks &amp; Dataset 集合
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  友情链接 | Related Link: <a href="https://blog.csdn.net/qq_35509823"> &nbspCSDN blog</a>
+  <a class="rss" href="https://saoyear.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
