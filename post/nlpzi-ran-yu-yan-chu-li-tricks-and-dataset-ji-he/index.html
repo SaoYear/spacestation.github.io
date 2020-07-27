@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>NLP(自然语言处理) - Tricks &amp; Dataset 集合 | Personal Page of Nian</title>
-<link rel="shortcut icon" href="https://saoyear.github.io/favicon.ico?v=1595843589207">
+<link rel="shortcut icon" href="https://saoyear.github.io/favicon.ico?v=1595845567503">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://saoyear.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="NLP(自然语言处理) - Tricks &amp; Dataset 集合 | Personal Page of Nian - Atom Feed" href="https://saoyear.github.io/atom.xml">
@@ -27,7 +27,7 @@ Adaptive Embe..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://saoyear.github.io">
-  <img class="avatar" src="https://saoyear.github.io/images/avatar.png?v=1595843589207" alt="">
+  <img class="avatar" src="https://saoyear.github.io/images/avatar.png?v=1595845567503" alt="">
   </a>
   <h1 class="site-title">
     Personal Page of Nian
@@ -46,12 +46,6 @@ Adaptive Embe..." />
       
         <a href="/archives" class="menu">
           BLOG
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          PROJECT
         </a>
       
     
@@ -217,6 +211,32 @@ Adaptive Embe..." />
 
         
 
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
         
 
         <div class="site-footer">
