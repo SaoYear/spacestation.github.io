@@ -3,11 +3,12 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Improving Neural Language Modeling via Adversarial Training 通过对抗噪音提升神经语言模型 | Personal Page of Nian</title>
-<link rel="shortcut icon" href="https://SaoYear.github.io/favicon.ico?v=1595847583317">
+<link rel="shortcut icon" href="https://SaoYear.github.io/favicon.ico?v=1595848416295">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://SaoYear.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Improving Neural Language Modeling via Adversarial Training 通过对抗噪音提升神经语言模型 | Personal Page of Nian - Atom Feed" href="https://SaoYear.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
 
 
@@ -29,7 +30,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://SaoYear.github.io">
-  <img class="avatar" src="https://SaoYear.github.io/images/avatar.png?v=1595847583317" alt="">
+  <img class="avatar" src="https://SaoYear.github.io/images/avatar.png?v=1595848416295" alt="">
   </a>
   <h1 class="site-title">
     Personal Page of Nian
@@ -255,6 +256,14 @@ AdvSoft_{\epsilon}(i, \bm\omega, h) &amp;=\frac{exp(\omega_i^Th - \epsilon||h||)
               </h3>
             </a>
           </div>
+		<div id="vcomments"></div>
+		    <script>
+		        new Valine({
+		            el: '#vcomments',
+		            appId: 'Pl24kgQPgFWg0sUK8Ey0t7lK-gzGzoHsz',
+		            appKey: 'V8C9MKRjv9NwiChfO31ah7Jr'
+		        })
+		    </script>
         
 
         
@@ -269,7 +278,7 @@ AdvSoft_{\epsilon}(i, \bm\omega, h) &amp;=\frac{exp(\omega_i^Th - \epsilon||h||)
   var gitalk = new Gitalk({
     clientID: '55446741524ed3c209d7',
     clientSecret: '7494f15dcbe792aa2c5a51ddd1eb2c2c86fed6e5',
-    repo: 'SaoYear.github.io',
+    repo: 'https://saoyear.github.io/',
     owner: 'SaoYear',
     admin: ['SaoYear'],
     id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
