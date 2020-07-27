@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SaoYear.github.io</id>
     <title>Personal Page of Nian</title>
-    <updated>2020-07-27T15:36:36.138Z</updated>
+    <updated>2020-07-27T16:03:04.994Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SaoYear.github.io"/>
     <link rel="self" href="https://SaoYear.github.io/atom.xml"/>
@@ -10,6 +10,99 @@
     <logo>https://SaoYear.github.io/images/avatar.png</logo>
     <icon>https://SaoYear.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Personal Page of Nian</rights>
+    <entry>
+        <title type="html"><![CDATA[词的表示（Word representation）]]></title>
+        <id>https://SaoYear.github.io/post/ci-de-biao-shi-word-representation/</id>
+        <link href="https://SaoYear.github.io/post/ci-de-biao-shi-word-representation/">
+        </link>
+        <updated>2020-07-27T15:42:33.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<!-- more -->
+<h1 id="自然语言处理简介">自然语言处理简介</h1>
+<p>语言是一种充满不确定性的信息，是人类在发展过程中进步不可或缺的一块拼图。可以想象，经过了数千甚至上万年的衍化，人类已经将语言创造成为一个十分神奇的工具——只用极少数的文字就能传递大量的信息，如同我现在在写博客，如同郭b说：“我看到太阳从海平面升起。”，我就立马回想到这个场景。这是一个十分神奇的过程，所以我们常常将语言理解为高度压缩的信息。</p>
+<p>自然语言处理即是我们想使用计算机模型去建模语言，以使计算机完成语言处理的任务。可想而知，这个过程十分的复杂和困难。同时NLP任务的可拓展性也很强，因为语言是一种时序信号，对语言的预测可以延伸到对所有时序信号的预测。如果把数值和词语做等号，我们预测任何不完整句子的下一个单词，就等同于在天气预报中预测明天的天气。</p>
+<p>但过程说起来简单，实际上是如何执行的呢？我们首先从最基础的单元，词语（word）说起。</p>
+<h1 id="word-meaning">Word Meaning</h1>
+<p>词典<br>
+我们如何去表示一个词语，这是一个很大的问题。首先我们想到的是建立一个词典，WordNet就是如此，大家可以去自行百度。这是一个词库，根据不同的词性建立起词和词的关系。同样，想使用这样的词典可以通过python的NLTK库完成。</p>
+<p>然而，使用词典存在很大的弊端：人类的语言是不断进步的，每年都会创造出新的词语，整新活，这是老逻辑了。所以词典存在最大的弊端就是：</p>
+<p>缺少新词的含义；<br>
+并不能完全的整合所有词，即便可以，它的数量也是十分庞大的。<br>
+其中第二点是与我们对词的表示相关的，一个很明显的事实是，我们不能直接将词、字母（或汉字）输入电脑，因为计算机是不会知道你输入的“滚”，“Hello” 和 “金b” 这些词有什么区别，对于他们来说，如果输入的内容没有与其占用的存储无关，则他们都是一样的。</p>
+<p>所以，在传统的NLP中，我们将任意一个词看作一个离散的符号，则我们处理词的方式是：</p>
+<h1 id="独热编码">独热编码</h1>
+<p>使用独热编码（one-hot）进行表示。使用one-hot即如果我想表示的词典有{“你”， “我”， “他”}这么大，那么我令每一个字都对应一个三维向量，所以：“你”→[1, 0, 0]; “我”→[0, 1, 0]； “他”→[0, 0, 1]。</p>
+<p>独热编码有明显的缺陷：</p>
+<ol>
+<li>它不能表示所有的词。对于处理在词典中从未出现过的词，我们称为Out of Vocabulary Problem(OOV)，许多学者都在尝试解决这样的问题。OOV问题出现的场景非常多，或者说100%会出现，这是因为当文中出现了不常见的人名或地名，或合成词时，他们都属于OOV场景。解决OOV问题有许多有效的方法，比如Cache Model等，这是题外话。</li>
+</ol>
+<p>对于这种问题，学者们也有对应的解决方案，就是使用character-level作为词的输入，即词根，或者词缀。这样的方式非常的有启发性，因为对于一个单词，往往许多词缀有着相同的意思，如：work - worker; dance - dancer。且对于新词可以使用增加新词根的方式而回避了一味增加词典的问题。我们通常称之为派生词法，derivational morphology。</p>
+<p>可是，这种派生词法尽管十分合理，但也存在着致命问题，即每个词根可能有多个意思，尽管有人提出了词袋（类似word-bag的方法，给一个词根多个意思）的方法，但是由于词根出现的地方实在是有太多了，这种重复的意思同样也会伤害词的表意。</p>
+<ol start="2">
+<li>无法表示和学习词语之间的相关性。由于one-hot编码中，每个词都是正交的，我们无法找到词和词之间的相关性，他们相互独立。我们当然想，更好的，使用一个向量去表示一个词，这里我们就引入了一个熟悉的名词：word vector，词向量。</li>
+</ol>
+<h1 id="词向量">词向量</h1>
+<p>一个one-hot编码转化为一个词向量的过程非常的简单，同上例，我们建立一个简单的词典，{'I', 'You', 'He'}，并分别用一个向量（随机设定的一个四维向量）表达一个词，那么过程是：</p>
+<p>我们可以用一个矩阵A运算来代替:</p>
+<p>我们称矩阵A为一个词嵌入矩阵(Word embedding matrix)，通过A，我们可以将one-hot编码直接转化成一个向量。</p>
+<p>回过头来，我们思考，这应该是一个怎样的向量呢？</p>
+<h1 id="语义分布用语境表达词语">语义分布：用语境表达词语</h1>
+<p>直觉上，我们认为词语和词语是由句子构成相关性的：猫是一种宠物，狗也是一种宠物，他们都有四条腿，一个尾巴一张嘴。这个句子表达了猫和狗的相关性。但词语间的相关性可能比我们想象的更复杂。</p>
+<p>既然句子构成了语言，我们将句子里位置接近的词，认为是两者相关的词，我们将一个词在句子中其附近出现的词称为语境（context）。根据句子中每个词的语境，我们能推断词向量的分布情况，我们成为distributed representaion。通常，每个词向量都是一个高维向量，一般的为50维以上，当然也有100维，1000维。往往词向量维度越高，它对词语的表达越好。</p>
+<p>这样的词向量是如何训练得，我们先放在一边，来看一下词向量得神奇之处。</p>
+<p>上图是将训练好的词向量经过降维后得到的结果，可以看到，神奇的是，所有音频聚集在了图的左上角，动物在左下角，还有一些国家、学校等等的聚集。如果我们使用训练好的向量做向量加减法，那么我们可以很神奇发现：</p>
+<p>那么如此好的向量是如何训练的呢？</p>
+<p>在我们的假设中，词得相关性与词和词互相作为语境的出现次数有关。则在固定的语料库（corpus）（即一个超大型的句子库，作为训练的数据集）中，我们可以利用统计，得到词A与词B的概率模型，我们可以得到良好的词向量。</p>
+<h1 id="词频">词频</h1>
+<p>使用词频构建词向量时，我们需要统计不同的词同时出现的频数，则如果我们还是用刚刚的词典['I', 'You', 'He']，在一个为：</p>
+<p>&quot;I love you.&quot;<br>
+&quot;He loves you.&quot;<br>
+&quot;I do not love him.&quot;<br>
+&quot;I do not love you.&quot;<br>
+&quot;He thinks I am a fool.&quot;</p>
+<p>的corpus中，我们可以统计出以下频数表格（注意 如果我们词典只有这三个词，且统计的为在一个句子里同时出现，那么'love', 'loves', 'do', 'not', '.'等token都为OOV！）：</p>
+<table>
+<thead>
+<tr>
+<th>I</th>
+<th>He</th>
+<th>You</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>He</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>You</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>那么我们就得到了一个词频表，这样我们对每一行做归一化，就可以得到他们的频数。<br>
+但实际上，真实的语料库包括了百万甚至上十亿个预料，而词典的大小也是百万级，这就让我们难以画出表格，更难以统计数据，因为在获得word embedding矩阵后，只是将one-hot编程word vector 就需要做 N * N * N 次左右的运算（N为词典大小）。</p>
+<p>所以我们可以考虑使用降维的方法降低embedding矩阵，以较小运算量。更何况，有些词很少同时出现，比如“自行车”和“厕纸”；“郭德纲”和“www._____.com”；或者“金b”和“正常人”。</p>
+<p>这反映出：</p>
+<ol>
+<li>
+<p>word embedding矩阵原本就是十分稀疏的；</p>
+</li>
+<li>
+<p>语料库越完备，获得的词向量越好。</p>
+</li>
+</ol>
+<p>通过SVD或者PCA降维等方式，我们可以获得降维后的词表：，这样我们就能更好的精炼词向量，并减少运算量。</p>
+<p>而显然，这样的方法太过暴力，所得到的词向量效果也不好，直到Tomas Mikolov 引入了word2vec模型，即大名鼎鼎的skip2gram和CBOW模型。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[逻辑回归（Logistic Regression）：线性回归与逻辑回归的来龙去脉]]></title>
         <id>https://SaoYear.github.io/post/luo-ji-hui-gui-logistic-regressionxian-xing-hui-gui-yu-luo-ji-hui-gui-de-lai-long-qu-mai/</id>
