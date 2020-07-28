@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SaoYear.github.io</id>
-    <title>Personal Page of Nian</title>
-    <updated>2020-07-27T16:03:04.994Z</updated>
+    <title>Spacestation of Nian</title>
+    <updated>2020-07-28T06:21:22.165Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SaoYear.github.io"/>
     <link rel="self" href="https://SaoYear.github.io/atom.xml"/>
-    <subtitle>I&apos;m Nian. Add me on Brawl Stars: #VVRRUJ0</subtitle>
+    <subtitle>Hi, I&apos;m Nian and this is my personal page. It is still updating. 
+&lt;br/&gt; BTW, Add me on Brawl Stars: #VVRRUJ0</subtitle>
     <logo>https://SaoYear.github.io/images/avatar.png</logo>
     <icon>https://SaoYear.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Personal Page of Nian</rights>
+    <rights>All rights reserved 2020, Spacestation of Nian</rights>
     <entry>
         <title type="html"><![CDATA[词的表示（Word representation）]]></title>
         <id>https://SaoYear.github.io/post/ci-de-biao-shi-word-representation/</id>
