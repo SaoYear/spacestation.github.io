@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>词的表示（Word representation） | Spacestation of Nian</title>
-<link rel="shortcut icon" href="https://SaoYear.github.io/favicon.ico?v=1595917542575">
+<link rel="shortcut icon" href="https://SaoYear.github.io/favicon.ico?v=1595924769975">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://SaoYear.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="词的表示（Word representation） | Spacestation of Nian - Atom Feed" href="https://SaoYear.github.io/atom.xml">
@@ -14,8 +14,17 @@
 
     <meta name="description" content="
 
+
 自然语言处理简介
-语言是一种充满不确定性的信息，是人类在发展过程中进步不可或缺的一块拼图。可以想象，经过了数千甚至上万年的衍化，人类已经将语言创造成为一个十分神奇的工具——只用极少数的文字就能传递大量的信息，如同我现在在写博客，如同郭b..." />
+Word Meaning
+独热编码
+词向量
+语义分布：用语境表达词语
+词频
+
+
+自然语言处理简介
+语言是一种充满不确定性的信息，是人类在发展过程中进步不可或缺的一块拼图。可以想象，经过了数千甚至上万年的衍化，人类已经..." />
     <meta name="keywords" content="自然语言处理(NLP)" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -25,7 +34,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://SaoYear.github.io">
-  <img class="avatar" src="https://SaoYear.github.io/images/avatar.png?v=1595917542575" alt="">
+  <img class="avatar" src="https://SaoYear.github.io/images/avatar.png?v=1595924769975" alt="">
   </a>
   <h1 class="site-title">
     Spacestation of Nian
@@ -96,6 +105,15 @@
               <div class="post-content">
                 <!-- more -->
 <!-- more -->
+<p><ul class="markdownIt-TOC">
+<li><a href="#%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E7%AE%80%E4%BB%8B">自然语言处理简介</a></li>
+<li><a href="#word-meaning">Word Meaning</a></li>
+<li><a href="#%E7%8B%AC%E7%83%AD%E7%BC%96%E7%A0%81">独热编码</a></li>
+<li><a href="#%E8%AF%8D%E5%90%91%E9%87%8F">词向量</a></li>
+<li><a href="#%E8%AF%AD%E4%B9%89%E5%88%86%E5%B8%83%E7%94%A8%E8%AF%AD%E5%A2%83%E8%A1%A8%E8%BE%BE%E8%AF%8D%E8%AF%AD">语义分布：用语境表达词语</a></li>
+<li><a href="#%E8%AF%8D%E9%A2%91">词频</a></li>
+</ul>
+</p>
 <h1 id="自然语言处理简介">自然语言处理简介</h1>
 <p>语言是一种充满不确定性的信息，是人类在发展过程中进步不可或缺的一块拼图。可以想象，经过了数千甚至上万年的衍化，人类已经将语言创造成为一个十分神奇的工具——只用极少数的文字就能传递大量的信息，如同我现在在写博客，如同郭b说：“我看到太阳从海平面升起。”，我就立马回想到这个场景。这是一个十分神奇的过程，所以我们常常将语言理解为高度压缩的信息。</p>
 <p>自然语言处理即是我们想使用计算机模型去建模语言，以使计算机完成语言处理的任务。可想而知，这个过程十分的复杂和困难。同时NLP任务的可拓展性也很强，因为语言是一种时序信号，对语言的预测可以延伸到对所有时序信号的预测。如果把数值和词语做等号，我们预测任何不完整句子的下一个单词，就等同于在天气预报中预测明天的天气。</p>

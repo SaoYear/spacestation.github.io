@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>逻辑回归（Logistic Regression）：线性回归与逻辑回归的来龙去脉 | Spacestation of Nian</title>
-<link rel="shortcut icon" href="https://SaoYear.github.io/favicon.ico?v=1595917542575">
+<link rel="shortcut icon" href="https://SaoYear.github.io/favicon.ico?v=1595924769975">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://SaoYear.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="逻辑回归（Logistic Regression）：线性回归与逻辑回归的来龙去脉 | Spacestation of Nian - Atom Feed" href="https://SaoYear.github.io/atom.xml">
@@ -13,7 +13,6 @@
 
 
     <meta name="description" content="
-
 
 Intro
 Logistic Regression
@@ -26,7 +25,7 @@ Logistic Regression
 1.4 逻辑回归的形式
 
 
-2. 回归的核心：损失函..." />
+2. 回归的核心：损失函数..." />
     <meta name="keywords" content="机器学习(Machine Learning)" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -36,7 +35,7 @@ Logistic Regression
       <div class="main-content">
         <div class="site-header">
   <a href="https://SaoYear.github.io">
-  <img class="avatar" src="https://SaoYear.github.io/images/avatar.png?v=1595917542575" alt="">
+  <img class="avatar" src="https://SaoYear.github.io/images/avatar.png?v=1595924769975" alt="">
   </a>
   <h1 class="site-title">
     Spacestation of Nian
@@ -106,7 +105,6 @@ Logistic Regression
             <div class="post-content-wrapper">
               <div class="post-content">
                 <!-- more -->
-<!-- more -->
 <p><ul class="markdownIt-TOC">
 <li><a href="#intro">Intro</a></li>
 <li><a href="#logistic-regression">Logistic Regression</a>
@@ -185,7 +183,7 @@ Logistic Regression
 <h3 id="14-逻辑回归的形式">1.4 逻辑回归的形式</h3>
 <p>有了以上的目的，我们只需要找到一个方程，对这个方程 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span></span></span>，我们需要保证其值域为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">[0, 1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span> ，且为单调函数，最终我们选择了Sigmoid函数作为了逻辑回归的函数，至于为什么这样选择，可以参照<a href="https://blog.csdn.net/hwcptbtptp/article/details/84975994?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task">这篇博客</a>和其引用的<a href="https://blog.csdn.net/baidu_15238925/article/details/81291247">这篇博客</a>。</p>
 <p>我们先看Sigmoid函数的样子：<br>
-<img src="http://img3.doubanio.com/view/note/l/public/p44911363.jpg#pic_center" width="50%"></p>
+<img src="https://SaoYear.github.io/post-images/1595919553147.png" alt="" loading="lazy"></p>
 <center>图二：Sigmoid函数</center>
 <p>Sigmoid的函数表达式为:</p>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mfrac><msup><mi>e</mi><mi>x</mi></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mi>x</mi></msup></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">f(x) = \frac{e^x}{1+e^x} = \frac{1}{1+e^{-x}}
