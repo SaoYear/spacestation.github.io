@@ -2,11 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SaoYear.github.io</id>
     <title>Spacestation of Nian</title>
-    <updated>2020-07-28T06:21:22.165Z</updated>
+    <updated>2020-07-28T06:25:44.132Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SaoYear.github.io"/>
     <link rel="self" href="https://SaoYear.github.io/atom.xml"/>
-    <subtitle>Hi, I&apos;m Nian and this is my personal page. It is still updating. 
+    <subtitle>Hi, I&apos;m Nian and this is my personal page. It is still updating.
+&lt;br /&gt; I love to attempt everything, so my blog seems a little bit messy :(  
 &lt;br/&gt; BTW, Add me on Brawl Stars: #VVRRUJ0</subtitle>
     <logo>https://SaoYear.github.io/images/avatar.png</logo>
     <icon>https://SaoYear.github.io/favicon.ico</icon>
